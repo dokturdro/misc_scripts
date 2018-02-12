@@ -1,6 +1,9 @@
 import sys
 import re
 
+path = sys.argv[1]
+file = open(path,"r")
+
 # Regular expression isolating the desired part of a string #
 pattern=re.compile('^\d+\.\d+\.\d+\.\d+\s\[[0-3]\d/(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)/20\d\d:[0-2][0-9]:[0-5][0-9]:[0-5][0-9]\s\+[0-1][0-9]00\]\s\"GET http://((?:[a-z]+\.)+[a-z]+(?:/[a-z]+)*).*\sHTTP/\d\.\d\"\s\d+\s\d+$')
 
